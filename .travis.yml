@@ -15,7 +15,7 @@ before_deploy:
       GOARCH=${PLATFORM#*/}
 
       if [ "$GOOS" = "windows" ]; then
-        build_cmd="GOOS=$GOOS GOARCH=$GOARCH go build -o otscli -ldflags '-w -s'"
+        build_cmd="GOOS=$GOOS GOARCH=$GOARCH go build -o otscli.exe -ldflags '-w -s'"
       else
         build_cmd="CGO_ENABLED=0 GOOS=$GOOS GOARCH=$GOARCH go build -o otscli -ldflags '-d -w -s'"
       fi
