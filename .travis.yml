@@ -45,3 +45,6 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
+
+notifications:
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
